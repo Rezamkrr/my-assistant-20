@@ -1,0 +1,13 @@
+@media (max-width: 600px) {
+    #categoriesContainer {
+        grid-template-columns: 1fr;
+    }
+
+    body {
+        padding: 10px;
+    }
+
+    .category {
+        margin-bottom: 15px;
+    }
+}

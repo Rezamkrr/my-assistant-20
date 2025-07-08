@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دستیار صوتی هوشمند</title>
+    <link rel="manifest" href="manifest.json">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="icon" href="icons/favicon.ico">
+</head>
+<body>
+    <div id="app">
+        <header>
+            <h1>🤖 دستیار صوتی هوشمند</h1>
+        </header>
+
+        <main>
+            <div class="shortcut-info">
+                کلید میانبر: 
+                <kbd>Ctrl</kbd> + <kbd>Space</kbd>
+            </div>
+
+            <button id="startRecording">🎤 شروع ضبط</button>
+
+            <div id="categoriesContainer"></div>
+        </main>
+    </div>
+
+    <script src="js/voice-recognition.js"></script>
+    <script src="js/app.js"></script>
+    <script>
+        // راه‌اندازی سرویس ورکر
+        if ('serviceWorker' in navigator) {
+            window.addEventListener('load', () => {
+                navigator.serviceWorker.register('/service-worker.js');
+            });
+        }
+    </script>
+</body>
+</html>
